@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>leapyear</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="about.html">About</a>
+          <a href="home.html">Home</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  <div class="container">
+    <i class="fa fa-github fa-2x"></i>
+    <h1>Leap Year</h1>
+    <img src="images/lighthouse.jpeg" class="medium" alt="image of a lighthouse">
+    <form id="form1">
+      <input type="number" id="leapyear" placeholder="Enter Year">
+      <input type="button" class="btn btn-info" onclick="Calculate()" value="calculate">
+    </form>
+      <p id="answer"> </p>
+  </div>
+    <script src="app.js"></script>
+  </body>
+</html>
