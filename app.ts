@@ -2,21 +2,31 @@
 // var myName = inputField.value;
 // console.log(myName);
 
-function Calculate() {
-  let year = document.getElementById("leapyear").value
-  document.getElementById("answer").innerText = LeapYearFinder(year);
-}
 
-function LeapYearFinder(year) {
-  if (parseInt(year) % 400 === 0) {
-    return "Leap Year";
+function Calculate() {
+  let number = document.getElementById("number").value
+
+  let numberList = parseInt(number);
+  let results = "";
+  let resultsText= "";
+  for(var i = 1; i<numberList; i++) {
+
+
+    if (i % 3 === 0 && i % 5 === 0) {
+      results = "Blingbong,";
+    }
+    else if (i % 5 === 0) {
+      results = "Bong,";
+    }
+    else if (i % 3 === 0) {
+      results = "Bling,";
+    }
+    else {
+      results = i + ",";
+    }
+
+    resultsText+= "<li>" + results + "</li>";
   }
-  if (parseInt(year) % 100 === 0) {
-    return "Not a Leap Year";
-  }
-  if (parseInt(year) % 4 === 0) {
-    return "Leap Year";
-  }
-  return "Not a Leap Year";
+  document.getElementById("answer").innerHTML = resultsText;
 
 }

@@ -1,16 +1,22 @@
 function Calculate() {
-    var year = document.getElementById("leapyear").value;
-    document.getElementById("answer").innerText = LeapYearFinder(year);
-}
-function LeapYearFinder(year) {
-    if (parseInt(year) % 400 === 0) {
-        return "Leap Year";
+    var number = document.getElementById("number").value;
+    var numberList = parseInt(number);
+    var results = "";
+    var resultsText = "";
+    for (var i = 1; i < numberList; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            results = "Blingbong,";
+        }
+        else if (i % 5 === 0) {
+            results = "Bong,";
+        }
+        else if (i % 3 === 0) {
+            results = "Bling,";
+        }
+        else {
+            results = i + ",";
+        }
+        resultsText += "<li>" + results + "</li>";
     }
-    if (parseInt(year) % 100 === 0) {
-        return "Not a Leap Year";
-    }
-    if (parseInt(year) % 4 === 0) {
-        return "Leap Year";
-    }
-    return "Not a Leap Year";
+    document.getElementById("answer").innerHTML = resultsText;
 }

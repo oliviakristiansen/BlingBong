@@ -1,13 +1,13 @@
 body {
   text: fixed;
-  font-family: cursive;
-  color: #e5dee8;
-  background-image: url(../images/Stars.jpeg);
+  font-family: arial;
+  color: orange;
+  background-image: url(../images/Rock.jpeg);
 }
 
 input {
-  border-color: #e5dee8;
-  border-style: solid;
+  border-color: white;
+  border-style: striped;
   border-width: 5px;
 
 }
@@ -19,6 +19,10 @@ input {
 }
 
 a {
-  font-family: fantasy;
-  color: #e5dee8;
+  font-family: cursive;
+  color: black;
+}
+
+form {
+  color: black;
 }
